@@ -1,10 +1,13 @@
+import { Outlet } from "react-router-dom";
 import Container from "../../ui/container/Container";
+import NavBar from "../../ui/NavBar/NavBar";
 
 const MainLayout = () => {
     return (
        <Container>
          <div>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, non. Provident, numquam</h1>
+            <NavBar></NavBar>
+            <Outlet></Outlet>
         </div>
        </Container>
     );

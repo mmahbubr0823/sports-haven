@@ -1,11 +1,33 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../../component/layout/mainLayout/MainLayout';
 import PageNotFound from '../../pages/PageNotFound/PageNotFound';
+import HomePage from '../../pages/HomePage/HomePage';
+import AboutUs from '../../pages/AboutUs/AboutUs';
+import AllProducts from '../../pages/AllProducts/AllProducts';
+import ManageProducts from '../../pages/ManageProducts/ManageProducts';
 
 const AllRoutes = createBrowserRouter([
     {
         path:'/',
-        element:<MainLayout></MainLayout>
+        element:<MainLayout></MainLayout>,
+        children:([
+            {
+                path:'/',
+                element:<HomePage></HomePage>
+            },
+            {
+                path:'/about-us',
+                element:<AboutUs></AboutUs>
+            },
+            {
+                path:'/all-products',
+                element:<AllProducts></AllProducts>
+            },
+            {
+                path:'/manage-products',
+                element:<ManageProducts></ManageProducts>
+            },
+        ])
     },
     {
         path: '*',
