@@ -1,8 +1,11 @@
+import Banner from "./Banner";
+import FeaturedProducts from "./FeaturedProducts";
 
 const HomePage = () => {
     return (
         <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium.
+           <Banner></Banner>
+           <FeaturedProducts></FeaturedProducts>
         </div>
     );
 };

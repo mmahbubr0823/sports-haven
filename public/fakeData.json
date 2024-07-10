@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      },
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      },
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      },
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      },
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      },
+    {
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "stock_quantity": 150,
+        "brand": "SoundMagic",
+        "rating": {
+          "average": 4.5,
+          "reviews": 120,
+          "react_rating": {
+            "value": 4.5,
+            "max": 5
+          }
+        },
+        "product_description": "High-quality wireless headphones with noise-cancellation and long battery life. Perfect for music lovers and commuters.",
+        "price": 99.99,
+        "image": "https://example.com/images/wireless-headphones.jpg"
+      }
+      
+]
