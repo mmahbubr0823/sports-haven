@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
     <li ><NavLink className={({ isActive }) => isActive ? 'underline text-green-400' : 'hover:text-green-600'} to="/all-products"> All Products</NavLink></li>
     <li ><NavLink className={({ isActive }) => isActive ? 'underline text-green-400' : 'hover:text-green-600'} to="/about-us">About Us</NavLink></li>
     <li ><NavLink className={({ isActive }) => isActive ? 'underline text-green-400' : 'hover:text-green-600'} to="/manage-products">Manage Products</NavLink></li>
-    <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink className={({ isActive }) => isActive ? 'underline text-green-400' : 'hover:text-green-600'} to="/signUp"> Cart</NavLink></li>
+    <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink className={({ isActive }) => isActive ? 'underline text-green-400' : 'hover:text-green-600'} to="/my-cart"> Cart</NavLink></li>
    
 </>
 

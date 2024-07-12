@@ -6,6 +6,7 @@ import AboutUs from '../../pages/AboutUs/AboutUs';
 import AllProducts from '../../pages/AllProducts/AllProducts';
 import ManageProducts from '../../pages/ManageProducts/ManageProducts';
 import SingleProduct from '../../pages/SingleProduct/SingleProduct';
+import Cart from '../../pages/Cart/Cart';
 
 const AllRoutes = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const AllRoutes = createBrowserRouter([
             {
                 path:'/manage-products',
                 element:<ManageProducts></ManageProducts>
+            },
+            {
+                path:'/my-cart',
+                element:<Cart></Cart>
             },
         ])
     },

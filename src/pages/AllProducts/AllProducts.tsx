@@ -6,7 +6,7 @@ import {
   increment,
   incrementByAmount,
 } from "../../redux/slice/counterSlice";
-import { useGetAllProductsQuery } from "../../redux/api/getAllProducts";
+import { useGetAllProductsQuery } from "../../redux/api/sportsHavenApi";
 import ProductCard from "./ProductCard";
 import Spinner from "../../utils/Spinner/Spinner";
 

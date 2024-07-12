@@ -18,7 +18,14 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    addToCart: builder.query({
+      query: (body) => ({
+        url: "/create-cart",
+        method: "POST",
+        body: body,
+      }),
+    }),
   }),
 });
 
-export const { useGetAllProductsQuery, useGetSingleProductQuery } = baseApi;
+export const { useGetAllProductsQuery, useGetSingleProductQuery, useAddToCartQuery } = baseApi;

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../slice/counterSlice";
-import { baseApi } from "../api/getAllProducts";
+import { baseApi } from "../api/sportsHavenApi";
 
 export const store = configureStore({
   reducer: {
