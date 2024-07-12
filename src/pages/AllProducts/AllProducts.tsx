@@ -7,13 +7,17 @@ import {
   incrementByAmount,
 } from "../../redux/slice/counterSlice";
 import { useGetAllProductsQuery } from "../../redux/api/getAllProducts";
+import ProductCard from "./ProductCard";
+import Spinner from "../../utils/Spinner/Spinner";
 
 const AllProducts = () => {
   const count = useSelector((state: RootState) => state.counter.value);
-  const { data } = useGetAllProductsQuery(undefined);
-  //   console.log(data);
-
+  const { data, isLoading } = useGetAllProductsQuery(undefined);
   const dispatch = useDispatch();
+
+  if (isLoading) {
+    return <Spinner></Spinner>;
+  }
   return (
     <div>
       <Button onClick={() => dispatch(increment())}>+</Button>
@@ -21,9 +25,9 @@ const AllProducts = () => {
       <Button onClick={() => dispatch(decrement())}>-</Button>
       <Button onClick={() => dispatch(incrementByAmount(4))}>amount</Button>
 
-      <div>
+      <div className="grid grid-cols-3 gap-3 w-full mx-auto">
         {data?.data?.map((item: any, index: number) => (
-          <h1 key={index}>{item.name}</h1>
+          <ProductCard key={index} item={item}></ProductCard>
         ))}
       </div>
     </div>

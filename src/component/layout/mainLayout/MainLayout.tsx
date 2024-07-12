@@ -1,16 +1,20 @@
 import { Outlet } from "react-router-dom";
 import Container from "../../ui/container/Container";
 import NavBar from "../../ui/NavBar/NavBar";
+import Footer from "../../ui/Footer/Footer";
 
 const MainLayout = () => {
-    return (
-       <Container>
-         <div>
-            <NavBar></NavBar>
-            <Outlet></Outlet>
+  return (
+    <div>
+      <NavBar></NavBar>
+      <Container>
+        <div>
+          <Outlet></Outlet>
         </div>
-       </Container>
-    );
+      </Container>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default MainLayout;

@@ -12,7 +12,13 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    getSingleProduct: builder.query({
+      query: (id) => ({
+        url: `/single-product/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetAllProductsQuery } = baseApi;
+export const { useGetAllProductsQuery, useGetSingleProductQuery } = baseApi;

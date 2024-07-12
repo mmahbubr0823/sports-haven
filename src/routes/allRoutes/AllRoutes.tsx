@@ -5,6 +5,7 @@ import HomePage from '../../pages/HomePage/HomePage';
 import AboutUs from '../../pages/AboutUs/AboutUs';
 import AllProducts from '../../pages/AllProducts/AllProducts';
 import ManageProducts from '../../pages/ManageProducts/ManageProducts';
+import SingleProduct from '../../pages/SingleProduct/SingleProduct';
 
 const AllRoutes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const AllRoutes = createBrowserRouter([
             {
                 path:'/all-products',
                 element:<AllProducts></AllProducts>
+            },
+            {
+                path:'/single-product/:id',
+                element:<SingleProduct></SingleProduct>
             },
             {
                 path:'/manage-products',
