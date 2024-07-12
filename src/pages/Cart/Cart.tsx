@@ -1,11 +1,35 @@
-import React from 'react';
-
+import { Table } from "antd";
+import { useGetAllCartsQuery } from "../../redux/api/cartApi";
 const Cart = () => {
-    return (
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae laboriosam modi molestias, sed at accusantium officia quisquam iusto! Accusantium possimus quae tempore minima aperiam expedita accusamus, quod provident eum ullam reprehenderit, necessitatibus iure itaque officia dolore debitis. Saepe velit, sit dolore cum hic repellat cupiditate illo, ratione harum qui eligendi.
-        </div>
-    );
+  const { data: cartData } = useGetAllCartsQuery(undefined);
+
+//   table data 
+  const data = cartData?.data;
+
+//   table columns 
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+      render: (text) => <a>{text}</a>,
+    },
+    {
+      title: "Brand",
+      dataIndex: "brand",
+      key: "brand",
+    },
+    {
+      title: "Price",
+      dataIndex: "price",
+      key: "price",
+    },
+  ];
+  return (
+    <div>
+      <Table columns={columns} dataSource={data} />;
+    </div>
+  );
 };
 
 export default Cart;

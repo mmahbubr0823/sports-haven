@@ -9,7 +9,7 @@ const MainLayout = () => {
     <div>
       <NavBar></NavBar>
       <Container>
-        <div>
+        <div className="min-h-[80vh]">
           <Toaster />
           <Outlet></Outlet>
         </div>

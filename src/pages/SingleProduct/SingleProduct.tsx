@@ -1,24 +1,17 @@
-import {
-  useAddToCartQuery,
-  useGetSingleProductQuery,
-} from "../../redux/api/sportsHavenApi";
+import { useGetSingleProductQuery } from "../../redux/api/sportsHavenApi";
 import { useParams } from "react-router-dom";
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import { Card, CardActions, CardContent } from "@mui/material";
 import { Button } from "antd";
 import Spinner from "../../utils/Spinner/Spinner";
 import toast from "react-hot-toast";
+import { useAddToCartMutation } from "../../redux/api/cartApi";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetSingleProductQuery(id);
   const singleProduct = data?.data;
-  const addToCart = useAddToCartQuery(singleProduct);
+  const [addToCart, { error }] = useAddToCartMutation();
+
   if (isLoading) {
     return <Spinner></Spinner>;
   }
@@ -34,11 +27,20 @@ const SingleProduct = () => {
   } = singleProduct;
 
   const handleCart = async () => {
-    const data = addToCart;
-    const res = data.data;
-
-    if (res.success) {
-      toast.success(res.message);
+    try {
+      const res = await addToCart(singleProduct);
+      if (res?.data?.success) {
+        toast.success("Product is added successfully to your cart", {
+          duration: 5000,
+        });
+      }
+      if (error?.data?.message) {
+        toast.success("This product is already added to your cart", {
+          duration: 5000,
+        });
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
