@@ -5,21 +5,22 @@ export const cartApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5001/api/cart",
   }),
-  tagTypes: ['Post', 'User'],
+  tagTypes: ["cart"],
   endpoints: (builder) => ({
+    getAllCarts: builder.query({
+      query: () => ({
+        url: "/get-all-carts",
+        method: "GET",
+      }),
+      providesTags: ["cart"],
+    }),
     addToCart: builder.mutation({
       query: (body) => ({
         url: "/create-cart",
         method: "POST",
         body,
       }),
-      invalidatesTags: ['Post'],
-    }),
-    getAllCarts: builder.query({
-      query: () => ({
-        url: "/get-all-carts",
-        method: "GET",
-      }),
+      invalidatesTags: ["cart"],
     }),
   }),
 });
