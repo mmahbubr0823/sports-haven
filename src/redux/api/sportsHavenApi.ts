@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
   reducerPath: "baseAp",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5001/api/sports-products",
+    baseUrl: "https://sports-haven-bakend.vercel.app/api/sports-products",
   }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({

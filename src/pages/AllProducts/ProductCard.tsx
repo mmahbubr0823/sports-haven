@@ -5,16 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
-const ProductCard = ({ item }) => {
+import { ProductCardProps } from '../../types/types';
+const ProductCard: React.FC<ProductCardProps>  = ({ item }) => {
   const {
     _id,
     name,
-    category,
-    stockQuantity,
-    brand,
-    rating,
     description,
-    price,
     image,
   } = item;
 

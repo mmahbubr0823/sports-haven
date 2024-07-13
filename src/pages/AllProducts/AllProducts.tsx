@@ -9,6 +9,7 @@ import {
 import { useGetAllProductsQuery } from "../../redux/api/sportsHavenApi";
 import ProductCard from "./ProductCard";
 import Spinner from "../../utils/Spinner/Spinner";
+import { TSports } from "../../types/types";
 
 const AllProducts = () => {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -26,7 +27,7 @@ const AllProducts = () => {
       <Button onClick={() => dispatch(incrementByAmount(4))}>amount</Button>
 
       <div className="grid grid-cols-3 gap-3 w-full mx-auto">
-        {data?.data?.map((item: any, index: number) => (
+        {data?.data?.map((item: TSports, index: number) => (
           <ProductCard key={index} item={item}></ProductCard>
         ))}
       </div>

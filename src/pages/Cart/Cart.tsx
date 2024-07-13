@@ -5,6 +5,7 @@ import { DeleteFilled } from "@ant-design/icons";
 import { RootState } from "../../redux/features/store";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../../redux/slice/counterSlice";
+import { TSports } from "../../types/types";
 const Cart = () => {
   const { data: cartData, isLoading } = useGetAllCartsQuery(undefined);
   const count = useSelector((state: RootState) => state.counter.value);
@@ -63,7 +64,7 @@ const Cart = () => {
   ];
 
   // cart calculation
-  const totalPrice = tableData?.reduce((acc, itm) => itm.price + acc, 0);
+  const totalPrice = tableData?.reduce((acc:number, itm:TSports) => itm.price + acc, 0);
   const discount = 15;
   const subTotal = Math.ceil(totalPrice + (totalPrice * discount) / 100);
 

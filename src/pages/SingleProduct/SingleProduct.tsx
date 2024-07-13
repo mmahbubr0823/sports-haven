@@ -5,12 +5,15 @@ import { Button } from "antd";
 import Spinner from "../../utils/Spinner/Spinner";
 import toast from "react-hot-toast";
 import { useAddToCartMutation } from "../../redux/api/cartApi";
+import { TApiError } from "../../types/types";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetSingleProductQuery(id);
   const singleProduct = data?.data;
   const [addToCart, { error }] = useAddToCartMutation();
+  console.log(error);
+  
 
   if (isLoading) {
     return <Spinner></Spinner>;
@@ -34,7 +37,7 @@ const SingleProduct = () => {
           duration: 5000,
         });
       }
-      if (error?.data?.message) {
+      if ((error as TApiError)?.status === 500) {
         toast.success("This product is already added to your cart", {
           duration: 5000,
         });
